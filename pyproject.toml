@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "padufes20-pipeline"
+version = "0.1.0"
+description = "Professional training & evaluation pipeline for PAD-UFES-20 (swappable models, group splits, rich metrics)."
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.23",
+  "pandas>=2.0",
+  "pyyaml>=6.0",
+  "tqdm>=4.66",
+  "scikit-learn>=1.2",
+  "matplotlib>=3.7",
+  "Pillow>=10.0",
+  "torch>=2.0",
+  "torchvision>=0.15",
+  "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.4",
+  "black>=24.0",
+  "pre-commit>=3.7",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E203"]
