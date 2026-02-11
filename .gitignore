@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.env
+
+# Outputs / experiments
+runs/
+outputs/
+**/checkpoints/
+**/metrics/
+**/figures/
+*.pt
+*.pth
+*.ckpt
+
+# Dataset (keep local, don't commit)
+data/
+datasets/
+PAD-UFES-20*/
+**/images/
+metadata.csv
